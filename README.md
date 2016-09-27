@@ -5,4 +5,4 @@ This project contains a custom made XboxControlles class made by [Tomas Rakusan]
 
 Instruction for how to setup Eclipse, use the XboxController class, and the WPILIB can be found in this Projects wiki
 
-#### [Wiki](wiki)
+#### [Wiki](../../wiki)
