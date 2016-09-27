@@ -1,13 +1,13 @@
-package org.usfirst.frc.team3571.robot.Command;
+package org.usfirst.frc.team3571.robot.command;
 
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class MyAuto extends Command {
+public class DefaultAuto extends Command {
 
-    public MyAuto() {
+    public DefaultAuto() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
