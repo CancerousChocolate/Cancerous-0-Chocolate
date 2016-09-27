@@ -1,30 +1,41 @@
 package org.usfirst.frc.team3571.robot;
 
-import org.usfirst.frc.team3571.robot.utilities.XboxController.Axis;
 import org.usfirst.frc.team3571.robot.utilities.XboxController.Button;
-import org.usfirst.frc.team3571.robot.utilities.XboxController.Sides;
 
 public class Teleop extends OI {
-	// Only a reference is being passed therefore the button keeps on
-	// functioning
+
+	// Only a reference is being passed
+	// therefore the button keeps on functioning
 	static Button driveStopButton = driver.Buttons.B;
 
+	// Holds value for if triggers should be used instead of LeftStick Y
 	static boolean triggerDrive = false;
 	static Button triggerSwitchButton = driver.Buttons.LeftStick;
 
+	// Holds the current drive value
+	// which is invalid if the driver is holding button B
 	static double driveY = 0;
 
-	public static void Init() {
+	/**
+	 * The initialization code for Teleop
+	 */
+	public static void init() {
 		// TODO Make Teleop Init
 	}
 
-	public static void Periodic() {
+	/**
+	 * Runs at a maximum rate of 50Hz during Teleop
+	 */
+	public static void periodic() {
 		// TODO Make Teleop Code
 
+		// Flips the state of triggerDrive when Button B changes state to
+		// pressed
 		if (triggerSwitchButton.changedDown) {
 			triggerDrive = !triggerDrive;
 		}
 
+		// Controls which Axis controls the robot base drive
 		if (triggerDrive) {
 			driveY = driver.Triggers.Combined;
 		} else {

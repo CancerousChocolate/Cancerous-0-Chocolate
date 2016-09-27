@@ -7,6 +7,7 @@ package org.usfirst.frc.team3571.robot;
  * floating around.
  */
 public class RobotMap {
+
 	/**
 	 * This is everything that is connected to the PWM ports on the RoboRIO
 	 */

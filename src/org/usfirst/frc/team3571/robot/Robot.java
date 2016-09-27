@@ -52,16 +52,17 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopInit() {
-		Teleop.Init();
+		Teleop.init();
 	}
 
 	/**
-	 * This function is called periodically during operator control
+	 * This function is called periodically during operator control at a maximum
+	 * rate of 50Hz
 	 */
 	@Override
 	public void teleopPeriodic() {
 		OI.refreshAll();
-		Teleop.Periodic();
+		Teleop.periodic();
 	}
 
 	/**
