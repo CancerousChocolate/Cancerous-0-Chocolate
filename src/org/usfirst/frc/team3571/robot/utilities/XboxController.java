@@ -204,7 +204,7 @@ public class XboxController {
 		private int xs, ys;
 		private double[] val = new double[3];
 
-		public triggers(double r, double l) {
+		private triggers(double r, double l) {
 			Right = r;
 			Left = l;
 			combine();
@@ -266,7 +266,7 @@ public class XboxController {
 		public double X, Y;
 		double deadZone = 0;
 
-		public Axis(double x, double y) {
+		private Axis(double x, double y) {
 			X = x;
 			Y = y;
 		}

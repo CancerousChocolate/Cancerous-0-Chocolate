@@ -12,10 +12,10 @@ public class RobotMap {
 	 * This is everything that is connected to the PWM ports on the RoboRIO
 	 */
 	public static class PWM {
-		public static final int LeftFrontDriveMotor = 0;
-		public static final int LeftRearDriveMotor = 1;
-		public static final int RightFrontDriveMotor = 2;
-		public static final int RightRearDriveMotor = 3;
+		public static final int FRONT_LEFT_DRIVE_MOTOR = 0;
+		public static final int REAR_LEFT_DRIVE_MOTOR = 1;
+		public static final int FRONT_RIGHT_DRIVE_MOTOR = 2;
+		public static final int REAR_RIGHT_DRIVE_MOTOR = 3;
 		// 4-9 Free
 	}
 
@@ -44,8 +44,12 @@ public class RobotMap {
 	 * This is everything that is connected to the USB's on the driver station
 	 */
 	public static class DriverUSB {
-		public static final int DriverController = 0;
-		public static final int OperatorController = 1;
+		public static final int DRIVER_CONTROLLER = 0;
+		public static final int OPERATOR_CONTROLLER = 1;
+	}
+	
+	public static class DEFAULT{
+		public static final double CONTROLLER_DEADZONE = 0.25;
 	}
 
 }
