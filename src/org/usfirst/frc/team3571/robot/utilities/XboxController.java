@@ -54,8 +54,11 @@ public class XboxController {
 	 *            The magnitude of the dead zone on the right stick
 	 */
 	public XboxController(int port, double leftDeadZone, double rightDeadZone) {
-		setDeadZones(leftDeadZone, rightDeadZone);
 		dStation = DriverStation.getInstance();
+		if(!dStation.getJoystickIsXbox(port)){
+			throw new RuntimeException("port " + port + " is not an XboxController");
+		}
+		setDeadZones(leftDeadZone, rightDeadZone);
 		this.port = port;
 		for (int ii = 0; ii < 10; ii++) {
 			buttons[ii] = new Button();
