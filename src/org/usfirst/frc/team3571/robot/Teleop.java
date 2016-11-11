@@ -32,7 +32,7 @@ public class Teleop extends OI {
 		// TODO Make Teleop Code
 		
 		if(test){
-			System.out.print("hello");
+			System.out.print("hi");
 		}
 		
 		// Flips the state of triggerDrive when Button B changes state to
