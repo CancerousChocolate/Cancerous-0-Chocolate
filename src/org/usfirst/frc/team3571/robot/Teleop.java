@@ -16,7 +16,8 @@ public class Teleop extends OI {
 	// which is invalid if the driver is holding button B
 	static double driveY = 0;
 	
-	static boolean test = false;
+	//hello ahmed
+	
 
 	/**
 	 * The initialization code for Teleop
@@ -31,9 +32,7 @@ public class Teleop extends OI {
 	public static void periodic() {
 		// TODO Make Teleop Code
 		
-		if(test){
-			System.out.print("hi");
-		}
+		
 		
 		// Flips the state of triggerDrive when Button B changes state to
 		// pressed
