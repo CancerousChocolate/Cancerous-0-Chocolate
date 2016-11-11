@@ -15,9 +15,7 @@ public class Teleop extends OI {
 	// Holds the current drive value
 	// which is invalid if the driver is holding button B
 	static double driveY = 0;
-	
-	//hello ahmed
-	
+	static boolean test; 
 
 	/**
 	 * The initialization code for Teleop
