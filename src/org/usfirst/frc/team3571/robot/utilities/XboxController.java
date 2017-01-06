@@ -55,9 +55,6 @@ public class XboxController {
 	 */
 	public XboxController(int port, double leftDeadZone, double rightDeadZone) {
 		dStation = DriverStation.getInstance();
-		if(!dStation.getJoystickIsXbox(port)){
-			throw new RuntimeException("port " + port + " is not an XboxController");
-		}
 		setDeadZones(leftDeadZone, rightDeadZone);
 		this.port = port;
 		for (int ii = 0; ii < 10; ii++) {
