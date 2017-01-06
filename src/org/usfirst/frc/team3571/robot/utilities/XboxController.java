@@ -2,7 +2,7 @@ package org.usfirst.frc.team3571.robot.utilities;
 
 import edu.wpi.first.wpilibj.buttons.Trigger;
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.communication.FRCNetworkCommunicationsLibrary;
+import edu.wpi.first.wpilibj.hal.HAL;
 import edu.wpi.first.wpilibj.DriverStation;
 
 /**
@@ -85,7 +85,7 @@ public class XboxController {
 			lRumble = (short) (value * 65535);
 		if (type == Sides.Right || type == Sides.Combined)
 			rRumble = (short) (value * 65535);
-		FRCNetworkCommunicationsLibrary.HALSetJoystickOutputs((byte) port, 0, lRumble, rRumble);
+		HAL.setJoystickOutputs((byte) port, 0, lRumble, rRumble);
 	}
 
 	/**
