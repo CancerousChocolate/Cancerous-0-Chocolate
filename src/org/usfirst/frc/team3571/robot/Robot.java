@@ -16,7 +16,7 @@ import edu.wpi.first.wpilibj.command.*;
  * directory.
  */
 public class Robot extends IterativeRobot {
-	SendableChooser chooser;
+	SendableChooser<Command> chooser;
 	Command auto;
 
 	/**
@@ -25,7 +25,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
-		chooser = new SendableChooser();
+		chooser = new SendableChooser<Command>();
 		chooser.addDefault("Default Auto", new DefaultAuto());
 		chooser.addObject("My Auto", new MyAuto());
 		SmartDashboard.putData("Auto choices", chooser);
